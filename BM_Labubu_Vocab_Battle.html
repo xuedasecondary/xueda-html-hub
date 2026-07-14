@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#130d2d">
+<title>BM 升级词汇 · Labubu Battle</title>
+<style>
+:root{--ink:#f7f5ff;--muted:#b7add6;--violet:#9b5cff;--pink:#ff4fa3;--cyan:#37e9ff;--gold:#ffd95a;--green:#56f39a;--red:#ff5874;--panel:rgba(21,15,48,.82);--line:rgba(255,255,255,.13)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{min-height:100%;margin:0;background:#100a25;color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;overflow-x:hidden}
+body{background:radial-gradient(circle at 18% 0,#352070 0,transparent 38%),radial-gradient(circle at 85% 5%,#5e164a 0,transparent 32%),linear-gradient(150deg,#0c0922,#17103b 50%,#090719);touch-action:manipulation}
+button,input,select{font:inherit}button{cursor:pointer;color:inherit}.hidden{display:none!important}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}.particle{position:absolute;border-radius:50%;opacity:.35;animation:float var(--d) linear infinite;background:var(--c);box-shadow:0 0 15px var(--c)}
+@keyframes float{from{transform:translate3d(0,110vh,0) scale(.3)}to{transform:translate3d(var(--x),-15vh,0) scale(1.1)}}
+.app{position:relative;z-index:1;min-height:100vh;min-height:100dvh;padding:clamp(12px,2vw,24px)}
+.screen{width:min(1180px,100%);margin:auto}.glass{background:var(--panel);border:1px solid var(--line);box-shadow:0 18px 60px #0008,inset 0 1px 0 #fff1;backdrop-filter:blur(16px);border-radius:28px}
+.start-wrap{min-height:calc(100dvh - 48px);display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:center}.hero{padding:30px;text-align:center;position:relative;overflow:hidden}.eyebrow{letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);font-weight:900;font-size:.78rem}.hero h1{font-size:clamp(2rem,5vw,4.8rem);line-height:.94;margin:.4em 0 .25em;text-shadow:0 0 28px #9b5cff88}.grad{background:linear-gradient(90deg,var(--gold),#fff,var(--cyan));-webkit-background-clip:text;color:transparent}.sub{color:var(--muted);font-size:clamp(.95rem,2vw,1.15rem)}
+.mascot{width:230px;height:250px;margin:18px auto 4px;position:relative;filter:drop-shadow(0 0 28px #a55cff77);animation:bob 2.4s ease-in-out infinite}.ear{position:absolute;width:66px;height:145px;top:0;background:linear-gradient(#6f3dcc,#2b184f);border:5px solid #b98cff;border-radius:70% 70% 36% 36%;z-index:0}.ear.l{left:28px;transform:rotate(-12deg)}.ear.r{right:28px;transform:rotate(12deg)}.head{position:absolute;left:22px;right:22px;top:70px;height:155px;background:linear-gradient(145deg,#b279ff,#5d32ad);border:6px solid #d8baff;border-radius:48% 48% 44% 44%;z-index:2}.face{position:absolute;inset:25px 19px 20px;background:#f5d6b3;border-radius:48%;border:4px solid #2d173f}.eye{position:absolute;top:40px;width:19px;height:26px;border-radius:50%;background:#211332}.eye:after{content:"";position:absolute;width:6px;height:8px;border-radius:50%;background:white;left:4px;top:3px}.eye.l{left:42px}.eye.r{right:42px}.mouth{position:absolute;left:50%;top:78px;transform:translateX(-50%);width:80px;height:31px;background:#24102d;border-radius:6px 6px 35px 35px;overflow:hidden}.teeth{height:13px;background:repeating-linear-gradient(90deg,#fff 0 12px,#cfbddd 12px 14px);clip-path:polygon(0 0,100% 0,94% 100%,86% 20%,75% 100%,63% 20%,50% 100%,37% 20%,25% 100%,14% 20%,6% 100%)}.cheek{position:absolute;top:69px;width:18px;height:8px;border-radius:50%;background:#ff779b88}.cheek.l{left:15px}.cheek.r{right:15px}.badge{position:absolute;right:12px;bottom:10px;background:linear-gradient(135deg,var(--gold),#ff8d3a);color:#2b1533;padding:9px 14px;border-radius:999px;font-weight:1000;transform:rotate(-7deg);box-shadow:0 8px 25px #ffb93666}
+@keyframes bob{50%{transform:translateY(-10px) rotate(1deg)}}
+.setup{padding:clamp(20px,3vw,36px)}.setup h2{margin:0 0 18px;font-size:1.6rem}.field{margin:14px 0}.field label{display:block;margin:0 0 8px;color:#d6cff0;font-weight:800}.input,.select{width:100%;min-height:54px;border:1px solid #ffffff22;border-radius:16px;background:#0c0926bb;color:white;padding:0 16px;outline:none}.input:focus,.select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #37e9ff1e}.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.seg input{display:none}.seg label{min-height:50px;margin:0;display:grid;place-items:center;text-align:center;padding:8px;border:1px solid #ffffff22;border-radius:14px;background:#ffffff08;transition:.2s}.seg input:checked+label{background:linear-gradient(135deg,#9b5cff44,#37e9ff2b);border-color:var(--cyan);box-shadow:0 0 18px #37e9ff25;color:#fff}.btn{border:0;border-radius:16px;min-height:56px;padding:0 22px;font-weight:1000;letter-spacing:.03em;transition:transform .15s,filter .2s,box-shadow .2s}.btn:active{transform:scale(.97)}.primary{width:100%;margin-top:16px;background:linear-gradient(100deg,var(--pink),var(--violet),#3ecfff);box-shadow:0 0 28px #a25cff66;font-size:1.1rem}.primary:hover{filter:brightness(1.12);box-shadow:0 0 40px #37e9ff66}
+.topbar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;margin-bottom:14px}.brand{font-weight:1000}.brand b{color:var(--gold)}.meta{display:flex;justify-content:flex-end;gap:9px;flex-wrap:wrap}.chip{background:#ffffff0c;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-weight:800;font-size:.9rem}.mute{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#ffffff0c}.arena{padding:18px;min-height:calc(100dvh - 100px);display:grid;grid-template-rows:auto 1fr auto;gap:14px}.hud{display:grid;grid-template-columns:1fr 1fr;gap:14px}.fighter{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center}.avatar{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;font-size:2rem;background:linear-gradient(145deg,#7a42d2,#29164e);border:2px solid #ba90ff;box-shadow:0 0 18px #9b5cff55}.boss-avatar{background:linear-gradient(145deg,#d64278,#4e142d);border-color:#ff729f}.name-row{display:flex;justify-content:space-between;font-weight:900;margin-bottom:7px}.bar{height:15px;background:#080617;border:1px solid #ffffff1a;border-radius:999px;overflow:hidden}.fill{height:100%;width:100%;border-radius:inherit;transition:width .45s ease;background:linear-gradient(90deg,var(--green),var(--cyan));box-shadow:0 0 12px #37e9ffaa}.boss-fill{background:linear-gradient(90deg,#ff9e3a,var(--red))}.xp{height:7px;margin-top:6px}.xp .fill{background:linear-gradient(90deg,var(--gold),var(--pink))}
+.battle{display:grid;grid-template-columns:160px 1fr 160px;gap:16px;align-items:center}.mini-char{text-align:center}.mini-char .mascot{transform:scale(.54);transform-origin:center;margin:-45px auto;width:230px}.boss-shape{font-size:7rem;filter:drop-shadow(0 0 30px #ff3d7a);animation:pulse 1.5s infinite}.boss-shape.hit{animation:bossHit .45s}.player-attack{animation:attack .55s!important}.player-hurt{animation:shake .45s!important}@keyframes pulse{50%{transform:scale(1.07)}}@keyframes attack{50%{transform:translateX(65px) scale(1.15)}}@keyframes bossHit{25%,75%{transform:translateX(-14px) rotate(-8deg);filter:brightness(2)}}@keyframes shake{20%,60%{transform:translateX(-12px)}40%,80%{transform:translateX(12px)}}
+.card{padding:clamp(16px,3vw,28px);position:relative;overflow:hidden}.mode-tag{display:inline-flex;align-items:center;gap:7px;background:#9b5cff22;border:1px solid #a978ff55;border-radius:999px;padding:7px 11px;color:#d8c5ff;font-weight:900;font-size:.82rem}.question{font-size:clamp(1.25rem,3vw,2.2rem);line-height:1.3;text-align:center;margin:20px 0 8px}.hint{text-align:center;color:var(--muted);min-height:1.5em}.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.answer{min-height:72px;border:1px solid #ffffff20;border-radius:18px;padding:12px;background:linear-gradient(145deg,#ffffff0d,#ffffff05);font-size:clamp(1rem,2vw,1.18rem);font-weight:900;box-shadow:inset 0 1px #fff1;position:relative}.answer:hover{border-color:#56dcff;transform:translateY(-2px);box-shadow:0 10px 24px #0004,0 0 18px #37e9ff22}.answer.correct{background:#37dc8f33;border-color:var(--green);box-shadow:0 0 25px #56f39a55}.answer.wrong{background:#ff496033;border-color:var(--red)}.answer:disabled{cursor:default}.letter{position:absolute;left:12px;top:12px;width:28px;height:28px;border-radius:9px;background:#ffffff12;display:grid;place-items:center;color:var(--cyan)}
+.timer-wrap{position:absolute;left:0;right:0;bottom:0;height:7px;background:#ffffff0c}.timer{height:100%;width:100%;background:linear-gradient(90deg,var(--cyan),var(--gold),var(--red));transform-origin:left;transition:width .1s linear}.feedback{text-align:center;min-height:30px;margin:8px 0 0;font-weight:900}.feedback.good{color:var(--green)}.feedback.bad{color:#ff8295}.footer-hud{display:flex;align-items:center;justify-content:space-between;gap:12px}.combo{font-weight:1000;color:var(--gold);font-size:1.15rem;text-shadow:0 0 16px #ffd95aaa}.combo.burst{animation:comboBurst .7s}@keyframes comboBurst{0%{transform:scale(.4);opacity:0}45%{transform:scale(1.8) rotate(-5deg);filter:brightness(1.7)}100%{transform:scale(1)}}.progress{color:var(--muted);font-weight:800}.score{font-size:1.25rem;font-weight:1000;color:var(--cyan)}
+.overlay{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:#090617d9;backdrop-filter:blur(10px);padding:18px}.result{width:min(680px,100%);padding:30px;text-align:center}.result h2{font-size:clamp(2rem,5vw,3.5rem);margin:0;background:linear-gradient(90deg,var(--gold),white,var(--cyan));-webkit-background-clip:text;color:transparent}.rank{font-size:5rem;margin:12px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}.stat{padding:16px 8px;background:#ffffff09;border:1px solid var(--line);border-radius:16px}.stat b{display:block;color:var(--cyan);font-size:1.35rem}.advice{text-align:left;background:#08061788;border-left:4px solid var(--gold);padding:14px 16px;border-radius:12px;color:#ded8ef;line-height:1.55}.result-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.secondary{background:#ffffff0b;border:1px solid var(--line)}
+.flash{position:fixed;inset:0;pointer-events:none;z-index:15;opacity:0}.flash.go{animation:flash .45s}@keyframes flash{20%{opacity:.5;background:#56f39a}100%{opacity:0}}.damage{position:fixed;z-index:18;font-size:2rem;font-weight:1000;color:var(--gold);text-shadow:0 0 12px #ff4f9f;pointer-events:none;animation:damage 1s forwards}@keyframes damage{to{transform:translateY(-100px) scale(1.5);opacity:0}}
+@media(max-width:850px){.start-wrap{grid-template-columns:1fr}.hero{padding:18px}.mascot{width:180px;height:200px;transform:scale(.78);transform-origin:top center;margin-bottom:-30px}.setup{padding:20px}.battle{grid-template-columns:1fr}.mini-char{display:none}.arena{min-height:calc(100dvh - 80px)}.topbar{grid-template-columns:1fr auto}.topbar .meta{grid-column:1/-1;justify-content:flex-start}.hud{grid-template-columns:1fr 1fr}.avatar{width:48px;height:48px}.fighter{gap:8px}.question{margin-top:14px}.answers{grid-template-columns:1fr}.answer{min-height:60px}.footer-hud{font-size:.85rem}.stats{grid-template-columns:1fr 1fr}.result-actions{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div id="particles"></div><div id="flash" class="flash"></div>
+<main class="app">
+  <section id="startScreen" class="screen start-wrap">
+    <div class="hero glass">
+      <div class="eyebrow">XUEDA · Bahasa Melayu</div>
+      <h1>升级词汇<br><span class="grad">ANIME BATTLE</span></h1>
+      <p class="sub">精准词汇 × 中文理解 × 拼写辨析 × Boss 对战</p>
+      <div class="mascot" aria-label="LabuBu fantasy mascot"><div class="ear l"></div><div class="ear r"></div><div class="head"><div class="face"><div class="eye l"></div><div class="eye r"></div><div class="cheek l"></div><div class="cheek r"></div><div class="mouth"><div class="teeth"></div></div></div></div><div class="badge">VOCAB HERO</div></div>
+    </div>
+    <form id="setupForm" class="setup glass">
+      <h2>⚔️ 创建你的挑战</h2>
+      <div class="field"><label for="playerName">玩家名字</label><input id="playerName" class="input" maxlength="16" placeholder="输入名字 / Nama pemain" required></div>
+      <div class="field"><label>游戏主题</label><div class="seg"><input type="radio" id="t1" name="theme" value="neon" checked><label for="t1">LabuBu Neon</label><input type="radio" id="t2" name="theme" value="candy"><label for="t2">LabuBu Candy</label><input type="radio" id="t3" name="theme" value="shadow"><label for="t3">LabuBu Shadow</label></div></div>
+      <div class="field"><label>背景音乐</label><div class="seg"><input type="radio" id="m1" name="music" value="intense" checked><label for="m1">⚡ 紧凑</label><input type="radio" id="m2" name="music" value="victory"><label for="m2">🏆 胜利</label><input type="radio" id="m3" name="music" value="off"><label for="m3">🔇 关闭</label></div></div>
+      <div class="field"><label>难度</label><div class="seg"><input type="radio" id="d1" name="difficulty" value="easy"><label for="d1">简单</label><input type="radio" id="d2" name="difficulty" value="normal" checked><label for="d2">普通</label><input type="radio" id="d3" name="difficulty" value="hard"><label for="d3">困难</label></div></div>
+      <div class="field"><label>题目数量</label><div class="seg"><input type="radio" id="q10" name="count" value="10" checked><label for="q10">10 题</label><input type="radio" id="q15" name="count" value="15"><label for="q15">15 题</label><input type="radio" id="q20" name="count" value="20"><label for="q20">20 题</label></div></div>
+      <button class="btn primary" type="submit">开始游戏 · MULAKAN</button>
+    </form>
+  </section>
+
+  <section id="gameScreen" class="screen hidden">
+    <div class="topbar"><div class="brand">BM <b>VOCAB BATTLE</b></div><button id="muteBtn" class="mute" aria-label="切换声音">🔊</button><div class="meta"><span id="levelChip" class="chip">LV.1</span><span id="scoreChip" class="chip">0 分</span></div></div>
+    <div class="arena glass">
+      <div class="hud">
+        <div class="fighter"><div class="avatar">😈</div><div><div class="name-row"><span id="playerLabel">Player</span><span id="hpText">100 HP</span></div><div class="bar"><div id="playerHp" class="fill"></div></div><div class="bar xp"><div id="xpBar" class="fill"></div></div></div></div>
+        <div class="fighter"><div class="avatar boss-avatar">👹</div><div><div class="name-row"><span>Boss · Kata Lemah</span><span id="bossHpText">100%</span></div><div class="bar"><div id="bossHp" class="fill boss-fill"></div></div></div></div>
+      </div>
+      <div class="battle">
+        <div id="playerChar" class="mini-char"><div class="mascot"><div class="ear l"></div><div class="ear r"></div><div class="head"><div class="face"><div class="eye l"></div><div class="eye r"></div><div class="mouth"><div class="teeth"></div></div></div></div></div></div>
+        <article class="card glass">
+          <span id="modeTag" class="mode-tag">MODE 1</span>
+          <h2 id="question" class="question"></h2><div id="hint" class="hint"></div>
+          <div id="answers" class="answers"></div><div id="feedback" class="feedback"></div>
+          <div class="timer-wrap"><div id="timer" class="timer"></div></div>
+        </article>
+        <div class="mini-char"><div id="bossChar" class="boss-shape">👺</div></div>
+      </div>
+      <div class="footer-hud"><div id="combo" class="combo">COMBO ×0</div><div id="progress" class="progress">1 / 10</div><div id="score" class="score">0 PTS</div></div>
+    </div>
+  </section>
+</main>
+
+<div id="resultOverlay" class="overlay hidden"><div class="result glass"><div class="eyebrow">MISSION COMPLETE</div><h2 id="resultTitle">Hebat!</h2><div id="rank" class="rank">🏆</div><div class="stats"><div class="stat"><b id="finalScore">0</b>总分</div><div class="stat"><b id="accuracy">0%</b>正确率</div><div class="stat"><b id="bestCombo">0</b>最佳 Combo</div><div class="stat"><b id="finalLevel">1</b>Level</div><div class="stat"><b id="correctCount">0</b>答对</div><div class="stat"><b id="timeUsed">0s</b>用时</div></div><div id="advice" class="advice"></div><div class="result-actions"><button id="restartBtn" class="btn primary">再战一次</button><button id="homeBtn" class="btn secondary">返回设置</button></div></div></div>
+
+<script>
+"use strict";
+const WORDS=[
+ {basic:"orang yang menjahit pakaian",up:"tukang jahit",zh:"裁缝师",alts:["pramusaji","peragawati","pramugari"]},
+ {basic:"bahagian pejabat di tempat lain",up:"cawangan",zh:"分行 / 分店",alts:["koleksi","segugus","seberkas"]},
+ {basic:"mata kurang jelas",up:"rabun",zh:"眼花 / 视力模糊",alts:["lemau","lemah","laju"]},
+ {basic:"memikul tanggungjawab",up:"mendukung",zh:"背负；支持",alts:["menjunjung","memimpin","mengait"]},
+ {basic:"mahu terlalu banyak",up:"tamak",zh:"贪心",alts:["tabah","rajin","sopan"]},
+ {basic:"wanita yang memperagakan pakaian",up:"peragawati",zh:"女模特儿",alts:["pramugari","pramusaji","siswi"]},
+ {basic:"orang yang melayani pelanggan di restoran",up:"pramusaji",zh:"餐厅服务员",alts:["pramugari","pramugara","peragawati"]},
+ {basic:"jatuh kerana lantai licin",up:"tergelincir",zh:"滑倒",alts:["terjerumus","terjunam","terbabas"]},
+ {basic:"masuk ke dalam keadaan buruk",up:"terjerumus",zh:"陷入 / 扑入",alts:["tergelincir","terjunam","terbabas"]},
+ {basic:"barang yang dikumpulkan",up:"koleksi",zh:"收集品 / 收藏",alts:["cawangan","segugus","seberkas"]},
+ {basic:"satu teguk air",up:"seteguk air",zh:"一口水",alts:["setitis air","seberkas","segugus"]},
+ {basic:"satu titik air",up:"setitis air",zh:"一滴水",alts:["seteguk air","seberkas","segugus"]},
+ {basic:"memotong hingga halus",up:"mencencang",zh:"剁碎",alts:["menghiris","membelah","mengait"]},
+ {basic:"memotong nipis-nipis",up:"menghiris",zh:"削 / 切成薄片",alts:["mencencang","membelah","mengait"]},
+ {basic:"memotong menjadi dua",up:"membelah",zh:"切开两半",alts:["menghiris","mencencang","mendukung"]},
+ {basic:"cahaya atau semangat yang bersinar",up:"semarak",zh:"光辉；蓬勃",alts:["rabun","lemau","tamak"]},
+ {basic:"bekerja untuk mendapatkan pendapatan",up:"mencari rezeki",zh:"谋生 / 找生计",alts:["mencari maklumat","mengadakan kempen","mengait bunga"]},
+ {basic:"mengambil buah dengan galah berkait",up:"mengait",zh:"钩采",alts:["menghiris","mencencang","mendukung"]},
+ {basic:"satu ikatan benda panjang",up:"seberkas",zh:"一捆 / 一束",alts:["segugus","setitis","seteguk"]},
+ {basic:"sekumpulan benda yang berangkai",up:"segugus",zh:"一串 / 一簇",alts:["seberkas","setitis","seteguk"]},
+ {basic:"biskut yang tidak rangup lagi",up:"lemau",zh:"饼干受潮 / 不脆",alts:["lemah","lambat","laju"]},
+ {basic:"wanita yang bertugas di dalam kapal terbang",up:"pramugari",zh:"空姐",alts:["pramusaji","peragawati","pramugara"]},
+ {basic:"bahasa yang sopan",up:"bahasa santun",zh:"有礼貌的语言",alts:["bahasa rojak","bahasa kasar","bahasa pasar"]},
+ {basic:"menjadikan bahasa Melayu lebih tinggi martabatnya",up:"memartabatkan bahasa Melayu",zh:"提升马来文地位",alts:["menghakis bahasa Melayu","mencemarkan bahasa","mengurangkan bahasa"]}
+];
+const MODES=[
+ {name:"模式一 · 升级词",icon:"⬆️"},{name:"模式二 · 中译 BM",icon:"🀄"},{name:"模式三 · 正误判断",icon:"✅"},{name:"模式四 · 限时抢答",icon:"⏱️"},{name:"模式五 · Battle 挑战",icon:"⚔️"}
+];
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+let G={},timerId=null,audio=null,musicTimer=null;
+
+function particles(){const box=$("#particles");for(let i=0;i<34;i++){const p=document.createElement("i");p.className="particle";const size=2+Math.random()*6;p.style.cssText=`left:${Math.random()*100}%;width:${size}px;height:${size}px;--d:${8+Math.random()*14}s;--x:${-80+Math.random()*160}px;--c:${["#9b5cff","#37e9ff","#ff4fa3","#ffd95a"][i%4]};animation-delay:${-Math.random()*18}s`;box.append(p)}}
+particles();
+
+class Sound{
+ constructor(){this.ctx=null;this.on=true;this.step=0}
+ init(){if(!this.ctx)this.ctx=new(window.AudioContext||window.webkitAudioContext)();this.ctx.resume()}
+ tone(freq,dur=.12,type="sine",vol=.08,when=0){if(!this.on||!this.ctx)return;const t=this.ctx.currentTime+when,o=this.ctx.createOscillator(),g=this.ctx.createGain();o.type=type;o.frequency.setValueAtTime(freq,t);g.gain.setValueAtTime(vol,t);g.gain.exponentialRampToValueAtTime(.001,t+dur);o.connect(g).connect(this.ctx.destination);o.start(t);o.stop(t+dur)}
+ fx(kind){this.init();const map={correct:[[523,.08],[659,.08],[784,.14]],wrong:[[180,.14],[120,.24]],combo:[[659,.08],[784,.08],[988,.08],[1318,.25]],victory:[[523,.12],[659,.12],[784,.12],[1047,.35]],level:[[440,.1],[660,.1],[880,.22]]};(map[kind]||[]).forEach((n,i)=>this.tone(n[0],n[1],kind==="wrong"?"sawtooth":"square",.06,i*.08))}
+ start(style){this.stop();if(style==="off"){this.on=false;return}this.on=true;this.init();const seq=style==="victory"?[262,330,392,523,392,330]:[110,165,220,165,247,220,165,196];const beat=style==="victory"?260:170;musicTimer=setInterval(()=>{this.tone(seq[this.step++%seq.length],.11,style==="victory"?"triangle":"sawtooth",.018);if(this.step%2===0)this.tone(55,.07,"square",.012)},beat)}
+ stop(){clearInterval(musicTimer);musicTimer=null}
+}
+audio=new Sound();
+
+function applyTheme(t){const r=document.documentElement;if(t==="candy"){r.style.setProperty("--violet","#ff70c8");r.style.setProperty("--pink","#ff8d5c");r.style.setProperty("--cyan","#7dffdd");r.style.setProperty("--panel","rgba(54,18,58,.82)")}else if(t==="shadow"){r.style.setProperty("--violet","#7b5cff");r.style.setProperty("--pink","#ef3d67");r.style.setProperty("--cyan","#62a8ff");r.style.setProperty("--panel","rgba(7,10,28,.88)")}else{r.style.setProperty("--violet","#9b5cff");r.style.setProperty("--pink","#ff4fa3");r.style.setProperty("--cyan","#37e9ff");r.style.setProperty("--panel","rgba(21,15,48,.82)")}}
+
+$("#setupForm").addEventListener("submit",e=>{e.preventDefault();const data=new FormData(e.target);audio.on=true;G={name:$("#playerName").value.trim()||"Vocab Hero",theme:data.get("theme"),music:data.get("music"),difficulty:data.get("difficulty"),total:+data.get("count"),index:0,score:0,hp:100,boss:100,combo:0,best:0,correct:0,level:1,xp:0,locked:false,start:Date.now(),mistakes:[]};applyTheme(G.theme);audio.start(G.music);G.questions=buildQuestions(G.total);$("#startScreen").classList.add("hidden");$("#gameScreen").classList.remove("hidden");$("#playerLabel").textContent=G.name;renderHUD();nextQuestion()});
+
+function buildQuestions(n){let pool=shuffle(WORDS),out=[];for(let i=0;i<n;i++){const w=pool[i%pool.length],mode=i%5;out.push(makeQuestion(w,mode))}return shuffle(out)}
+function makeQuestion(w,mode){let q,h="",opts,answer=w.up;
+ if(mode===0){q=`哪个词能把「${w.basic}」升级为更精准的表达？`;opts=shuffle([w.up,...w.alts]);h="Pilih kosa kata yang paling tepat."}
+ if(mode===1){q=`“${w.zh}” 的 Bahasa Melayu 是什么？`;opts=shuffle([w.up,...w.alts]);h="根据中文意思选择正确答案。"}
+ if(mode===2){const truePair=Math.random()>.45,shown=truePair?w.up:w.alts[Math.floor(Math.random()*w.alts.length)];q=`「${w.zh}」＝「${shown}」`;opts=["BETUL · 正确","SALAH · 错误"];answer=truePair?opts[0]:opts[1];h="判断这组词义配对是否正确。"}
+ if(mode===3){q=`限时！「${w.zh}」最准确的词是？`;opts=shuffle([w.up,...w.alts]);h="Masa sedang berjalan — cepat!"}
+ if(mode===4){q=`Boss 防御词：${w.basic}\n选择最强攻击词！`;opts=shuffle([w.up,...w.alts]);h="精准答案会造成双倍伤害。"}
+ return{w,mode,q,opts,answer}}
+
+function nextQuestion(){clearInterval(timerId);if(G.index>=G.total||G.hp<=0||G.boss<=0){finish();return}G.locked=false;const x=G.questions[G.index],m=MODES[x.mode];$("#modeTag").textContent=`${m.icon} ${m.name}`;$("#question").textContent=x.q;$("#hint").textContent=x.h;$("#feedback").textContent="";$("#feedback").className="feedback";const box=$("#answers");box.innerHTML="";x.opts.forEach((v,i)=>{const b=document.createElement("button");b.className="answer";b.innerHTML=`<span class="letter">${String.fromCharCode(65+i)}</span>${v}`;b.addEventListener("click",()=>choose(v,b));box.append(b)});$("#progress").textContent=`${G.index+1} / ${G.total}`;startTimer(x.mode)}
+function timeLimit(mode){if(mode!==3&&G.difficulty==="easy")return 0;const base=mode===3?8:G.difficulty==="hard"?10:G.difficulty==="normal"?16:0;return base}
+function startTimer(mode){let left=timeLimit(mode),bar=$("#timer");bar.style.width="100%";if(!left){bar.style.opacity="0";return}bar.style.opacity="1";const total=left;timerId=setInterval(()=>{left-=.1;bar.style.width=`${Math.max(0,left/total*100)}%`;if(left<=0){clearInterval(timerId);choose("__TIME__",null)}},100)}
+
+function choose(value,btn){if(G.locked)return;G.locked=true;clearInterval(timerId);$$('.answer').forEach(b=>b.disabled=true);const x=G.questions[G.index],ok=value===x.answer;$$('.answer').forEach(b=>{if(b.textContent.trim().endsWith(x.answer))b.classList.add("correct")});if(btn&&!ok)btn.classList.add("wrong");
+ if(ok){G.correct++;G.combo++;G.best=Math.max(G.best,G.combo);const mult=G.combo>=3?2:1,modeMult=x.mode===4?2:1,pts=100*mult*modeMult;G.score+=pts;G.xp+=25;const dmg=(100/G.total)*modeMult*(G.combo>=3?1.35:1);G.boss=Math.max(0,G.boss-dmg);audio.fx(G.combo>=3?"combo":"correct");$("#feedback").textContent=`JAWAPAN TEPAT! +${pts} 分 · ${x.w.up} = ${x.w.zh}`;$("#feedback").className="feedback good";$("#playerChar").classList.add("player-attack");$("#bossChar").classList.add("hit");flash();damageText(`-${Math.round(dmg)}%`,75,35);if(G.combo>=3){const c=$("#combo");c.classList.remove("burst");void c.offsetWidth;c.classList.add("burst")}
+ }else{const loss=G.difficulty==="hard"?25:G.difficulty==="easy"?12:18;G.hp=Math.max(0,G.hp-loss);G.combo=0;G.mistakes.push(x.w.up);audio.fx("wrong");$("#feedback").textContent=`${value==="__TIME__"?"MASA TAMAT!":"BELUM TEPAT!"} 正确答案：${x.answer} · ${x.w.zh}`;$("#feedback").className="feedback bad";$("#playerChar").classList.add("player-hurt");damageText(`-${loss} HP`,18,32)}
+ const old=G.level;G.level=1+Math.floor(G.xp/100);if(G.level>old)audio.fx("level");renderHUD();setTimeout(()=>{$("#playerChar").classList.remove("player-attack","player-hurt");$("#bossChar").classList.remove("hit");G.index++;nextQuestion()},G.difficulty==="easy"?1500:1100)}
+
+function renderHUD(){$("#playerHp").style.width=G.hp+"%";$("#hpText").textContent=G.hp+" HP";$("#bossHp").style.width=G.boss+"%";$("#bossHpText").textContent=Math.ceil(G.boss)+"%";$("#xpBar").style.width=(G.xp%100)+"%";$("#levelChip").textContent="LV."+G.level;$("#scoreChip").textContent=G.score+" 分";$("#score").textContent=G.score+" PTS";$("#combo").textContent="COMBO ×"+G.combo}
+function flash(){const f=$("#flash");f.classList.remove("go");void f.offsetWidth;f.classList.add("go")}
+function damageText(txt,x,y){const d=document.createElement("div");d.className="damage";d.textContent=txt;d.style.left=x+"%";d.style.top=y+"%";document.body.append(d);setTimeout(()=>d.remove(),1000)}
+
+function finish(){clearInterval(timerId);audio.stop();if(G.correct/G.total>=.6)audio.fx("victory");const acc=Math.round(G.correct/G.total*100),sec=Math.round((Date.now()-G.start)/1000);$("#resultOverlay").classList.remove("hidden");$("#resultTitle").textContent=G.hp<=0?"继续修炼，再来！":G.boss<=0?"Boss 击破！Hebat!":"挑战完成！Syabas!";$("#rank").textContent=acc>=90?"👑":acc>=75?"🏆":acc>=60?"⭐":"📚";$("#finalScore").textContent=G.score;$("#accuracy").textContent=acc+"%";$("#bestCombo").textContent=G.best;$("#finalLevel").textContent=G.level;$("#correctCount").textContent=`${G.correct}/${G.total}`;$("#timeUsed").textContent=sec+"s";let advice;if(acc>=90)advice="你已经能快速调用精准词汇。下一步：不用选项，把这些词写成完整句子，让“认识”升级为“会用”。";else if(acc>=70)advice="基础稳固，但仍有词义混淆。复习错题时用「中文意思 → BM 词 → 自创句子」三步法。";else advice="先缩小能力圈：每天只练 5 个词，每个词完成读、遮、说、写四次循环，再挑战 Battle。";const miss=[...new Set(G.mistakes)].slice(0,6);if(miss.length)advice+=` 重点复习：${miss.join("、")}。`;$("#advice").textContent=advice}
+
+$("#muteBtn").addEventListener("click",()=>{audio.on=!audio.on;$("#muteBtn").textContent=audio.on?"🔊":"🔇";if(audio.on)audio.start(G.music);else audio.stop()});
+$("#restartBtn").addEventListener("click",()=>{$("#resultOverlay").classList.add("hidden");audio.start(G.music);Object.assign(G,{index:0,score:0,hp:100,boss:100,combo:0,best:0,correct:0,level:1,xp:0,locked:false,start:Date.now(),mistakes:[]});G.questions=buildQuestions(G.total);renderHUD();nextQuestion()});
+$("#homeBtn").addEventListener("click",()=>{audio.stop();$("#resultOverlay").classList.add("hidden");$("#gameScreen").classList.add("hidden");$("#startScreen").classList.remove("hidden")});
+document.addEventListener("keydown",e=>{if($("#gameScreen").classList.contains("hidden")||G.locked)return;const i=["1","2","3","4","a","b","c","d"].indexOf(e.key.toLowerCase())%4;if(i>=0){const b=$$(".answer")[i];if(b)b.click()}});
+</script>
+</body>
+</html>
