@@ -1,6 +1,6 @@
 # 学达 HTML 教学资源中心
 
-第一版零付费 HTML Hub，适合使用 VS Code 编辑，并可发布到 GitHub Pages。
+第一版 HTML Hub，适合使用 VS Code 编辑，并可发布到 GitHub Pages。
 
 ## 本地开启
 
